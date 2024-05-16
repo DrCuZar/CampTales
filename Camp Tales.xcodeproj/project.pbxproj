@@ -14,6 +14,7 @@
 		CC62C94A2BF63A31009182DA /* Camp_TalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9492BF63A31009182DA /* Camp_TalesTests.swift */; };
 		CC62C9542BF63A31009182DA /* Camp_TalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9532BF63A31009182DA /* Camp_TalesUITests.swift */; };
 		CC62C9562BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9552BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift */; };
+		CC62C9632BF63F61009182DA /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9622BF63F61009182DA /* WelcomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CC62C94F2BF63A31009182DA /* Camp TalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Camp TalesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC62C9532BF63A31009182DA /* Camp_TalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp_TalesUITests.swift; sourceTree = "<group>"; };
 		CC62C9552BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp_TalesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC62C9622BF63F61009182DA /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				CC62C9382BF63A30009182DA /* Camp_TalesApp.swift */,
 				CC62C93A2BF63A30009182DA /* ContentView.swift */,
+				CC62C9622BF63F61009182DA /* WelcomePage.swift */,
 				CC62C93C2BF63A31009182DA /* Assets.xcassets */,
 				CC62C93E2BF63A31009182DA /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC62C9632BF63F61009182DA /* WelcomePage.swift in Sources */,
 				CC62C93B2BF63A30009182DA /* ContentView.swift in Sources */,
 				CC62C9392BF63A30009182DA /* Camp_TalesApp.swift in Sources */,
 			);
