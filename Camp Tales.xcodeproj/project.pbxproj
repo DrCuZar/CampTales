@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC1168D22C10A22D00D9F529 /* SecretKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1168D12C10A22D00D9F529 /* SecretKey.swift */; };
 		CC30DD002C0F8FF3004A0474 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30DCFF2C0F8FF3004A0474 /* TagView.swift */; };
 		CC30DD022C0FEC0C004A0474 /* OpenAIFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30DD012C0FEC0C004A0474 /* OpenAIFile.swift */; };
 		CC62C9392BF63A30009182DA /* Camp_TalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9382BF63A30009182DA /* Camp_TalesApp.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC1168D12C10A22D00D9F529 /* SecretKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKey.swift; sourceTree = "<group>"; };
 		CC30DCFF2C0F8FF3004A0474 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		CC30DD012C0FEC0C004A0474 /* OpenAIFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIFile.swift; sourceTree = "<group>"; };
 		CC62C9352BF63A30009182DA /* Camp Tales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camp Tales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				CC883A972C00DA2800C3A233 /* Player_List.swift */,
 				CC883AB52C0D6AA800C3A233 /* PlayerCard.swift */,
 				CC883AB32C0D641800C3A233 /* PlayerManager.swift */,
+				CC1168D12C10A22D00D9F529 /* SecretKey.swift */,
 				CC883AB72C0EBE2300C3A233 /* GenreView.swift */,
 				CC30DD012C0FEC0C004A0474 /* OpenAIFile.swift */,
 				CC30DCFF2C0F8FF3004A0474 /* TagView.swift */,
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC883AB82C0EBE2300C3A233 /* GenreView.swift in Sources */,
+				CC1168D22C10A22D00D9F529 /* SecretKey.swift in Sources */,
 				CC30DD002C0F8FF3004A0474 /* TagView.swift in Sources */,
 				CC30DD022C0FEC0C004A0474 /* OpenAIFile.swift in Sources */,
 				CC883AB22C0D5DD700C3A233 /* Players.swift in Sources */,
