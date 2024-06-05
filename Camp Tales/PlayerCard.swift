@@ -24,7 +24,7 @@ struct PlayerCard: View {
                    Spacer()
                }
                .padding()
-               .background(.lightGray)
+               .background(Color.newGray)
                .cornerRadius(10)
                .frame(height: geometry.size.height * 1.10)
            }
