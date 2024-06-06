@@ -11,7 +11,7 @@ import SwiftUI
 struct Camp_TalesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }
