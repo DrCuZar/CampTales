@@ -8,33 +8,44 @@
 import Foundation
 import SwiftUI
 
-struct WelcomePage:View {
+struct WelcomePage: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geoProx in
-                ZStack{
-                    
-                    VStack{
+                ZStack {
+                    VStack {
                         Text("Camp Tales")
                             .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize))
                         Text("Craft stories with provided words")
                             .font(.custom("aptos", size: UIFont.preferredFont(forTextStyle: .title3).pointSize))
                         
                         Spacer()
-                        ZStack{
-                            Rectangle()
-                                .fill(.lightRed)
-                                .frame(width: geoProx.size.width/1.5, height:
-                                        geoProx.size.width/3.5)
-                            Text("GET STARTED")
-                                .font(.custom("aptos-Bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize))
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        
+                        
+                        NavigationLink(destination: Players()) {
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color.lightRed)
+                                    .frame(width: geoProx.size.width / 1.5, height: geoProx.size.width / 3.5)
+                                Text("GET STARTED")
+                                    .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize))
+                                    .foregroundColor(.white)
+                            }
                         }
+                        
+                        Spacer()
                     }
                     .padding(.leading, 60)
                 }
             }
         }
-        
     }
 }
 

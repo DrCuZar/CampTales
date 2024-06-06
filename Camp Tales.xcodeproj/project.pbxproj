@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC1168D22C10A22D00D9F529 /* SecretKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1168D12C10A22D00D9F529 /* SecretKey.swift */; };
+		CC1168D62C113EDB00D9F529 /* WordTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1168D52C113EDB00D9F529 /* WordTag.swift */; };
+		CC1168D82C1149CC00D9F529 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1168D72C1149CC00D9F529 /* StoryView.swift */; };
 		CC30DD002C0F8FF3004A0474 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30DCFF2C0F8FF3004A0474 /* TagView.swift */; };
 		CC30DD022C0FEC0C004A0474 /* OpenAIFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30DD012C0FEC0C004A0474 /* OpenAIFile.swift */; };
 		CC62C9392BF63A30009182DA /* Camp_TalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9382BF63A30009182DA /* Camp_TalesApp.swift */; };
@@ -18,6 +20,7 @@
 		CC62C9542BF63A31009182DA /* Camp_TalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9532BF63A31009182DA /* Camp_TalesUITests.swift */; };
 		CC62C9562BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9552BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift */; };
 		CC62C9632BF63F61009182DA /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9622BF63F61009182DA /* WelcomePage.swift */; };
+		CC787FCE2C116F20000ADB42 /* DropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC787FCD2C116F20000ADB42 /* DropAreaView.swift */; };
 		CC883A982C00DA2800C3A233 /* Player_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC883A972C00DA2800C3A233 /* Player_List.swift */; };
 		CC883A9A2C08C1C800C3A233 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC883A992C08C1C800C3A233 /* SplashScreen.swift */; };
 		CC883AAB2C0A088000C3A233 /* aptos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC883AAA2C0A088000C3A233 /* aptos.ttf */; };
@@ -48,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		CC1168D12C10A22D00D9F529 /* SecretKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKey.swift; sourceTree = "<group>"; };
+		CC1168D52C113EDB00D9F529 /* WordTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTag.swift; sourceTree = "<group>"; };
+		CC1168D72C1149CC00D9F529 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		CC30DCFF2C0F8FF3004A0474 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		CC30DD012C0FEC0C004A0474 /* OpenAIFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIFile.swift; sourceTree = "<group>"; };
 		CC62C9352BF63A30009182DA /* Camp Tales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camp Tales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +66,7 @@
 		CC62C9532BF63A31009182DA /* Camp_TalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp_TalesUITests.swift; sourceTree = "<group>"; };
 		CC62C9552BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp_TalesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC62C9622BF63F61009182DA /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		CC787FCD2C116F20000ADB42 /* DropAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropAreaView.swift; sourceTree = "<group>"; };
 		CC883A972C00DA2800C3A233 /* Player_List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_List.swift; sourceTree = "<group>"; };
 		CC883A992C08C1C800C3A233 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		CC883AA92C0A073500C3A233 /* Camp-Tales-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Camp-Tales-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -125,13 +131,16 @@
 				CC62C9382BF63A30009182DA /* Camp_TalesApp.swift */,
 				CC62C93A2BF63A30009182DA /* ContentView.swift */,
 				CC883A992C08C1C800C3A233 /* SplashScreen.swift */,
-				CC883A972C00DA2800C3A233 /* Player_List.swift */,
-				CC883AB52C0D6AA800C3A233 /* PlayerCard.swift */,
-				CC883AB32C0D641800C3A233 /* PlayerManager.swift */,
 				CC1168D12C10A22D00D9F529 /* SecretKey.swift */,
 				CC883AB72C0EBE2300C3A233 /* GenreView.swift */,
 				CC30DD012C0FEC0C004A0474 /* OpenAIFile.swift */,
 				CC30DCFF2C0F8FF3004A0474 /* TagView.swift */,
+				CC1168D72C1149CC00D9F529 /* StoryView.swift */,
+				CC1168D52C113EDB00D9F529 /* WordTag.swift */,
+				CC787FCD2C116F20000ADB42 /* DropAreaView.swift */,
+				CC883A972C00DA2800C3A233 /* Player_List.swift */,
+				CC883AB52C0D6AA800C3A233 /* PlayerCard.swift */,
+				CC883AB32C0D641800C3A233 /* PlayerManager.swift */,
 				CC883AB12C0D5DD700C3A233 /* Players.swift */,
 				CC62C9622BF63F61009182DA /* WelcomePage.swift */,
 				CC62C93C2BF63A31009182DA /* Assets.xcassets */,
@@ -310,14 +319,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC883AB82C0EBE2300C3A233 /* GenreView.swift in Sources */,
+				CC787FCE2C116F20000ADB42 /* DropAreaView.swift in Sources */,
 				CC1168D22C10A22D00D9F529 /* SecretKey.swift in Sources */,
 				CC30DD002C0F8FF3004A0474 /* TagView.swift in Sources */,
 				CC30DD022C0FEC0C004A0474 /* OpenAIFile.swift in Sources */,
 				CC883AB22C0D5DD700C3A233 /* Players.swift in Sources */,
 				CC883A9A2C08C1C800C3A233 /* SplashScreen.swift in Sources */,
 				CC883AB62C0D6AA800C3A233 /* PlayerCard.swift in Sources */,
+				CC1168D62C113EDB00D9F529 /* WordTag.swift in Sources */,
 				CC883A982C00DA2800C3A233 /* Player_List.swift in Sources */,
 				CC883AB42C0D641800C3A233 /* PlayerManager.swift in Sources */,
+				CC1168D82C1149CC00D9F529 /* StoryView.swift in Sources */,
 				CC62C9632BF63F61009182DA /* WelcomePage.swift in Sources */,
 				CC62C93B2BF63A30009182DA /* ContentView.swift in Sources */,
 				CC62C9392BF63A30009182DA /* Camp_TalesApp.swift in Sources */,
@@ -484,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Camp Tales/Preview Content\"";
+				DEVELOPMENT_TEAM = C46QVW4ALJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Camp-Tales-Info.plist";
@@ -497,7 +510,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Phantom-Fury.Camp-Tales";
+				PRODUCT_BUNDLE_IDENTIFIER = "Phantom-Fury.CT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -513,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Camp Tales/Preview Content\"";
+				DEVELOPMENT_TEAM = C46QVW4ALJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Camp-Tales-Info.plist";
@@ -526,7 +540,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Phantom-Fury.Camp-Tales";
+				PRODUCT_BUNDLE_IDENTIFIER = "Phantom-Fury.CT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

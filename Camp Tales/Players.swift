@@ -12,60 +12,74 @@ struct Players: View {
     @StateObject private var playerManager = PlayerManager()
     @State private var shakeAdd = false
     @State private var shakeDel = false
+    @State private var navigateToGenre = false
     
     var body: some View {
-        GeometryReader{ geo in
-            VStack {
-                HStack{
-                    Text("WHO'S PLAYING?")
-                        .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize))
-                        .padding(.leading)
+        NavigationStack {
+            GeometryReader { geo in
+                VStack {
+                    HStack {
+                        Text("WHO'S PLAYING?")
+                            .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize))
+                            .padding(.leading)
+                        Spacer()
+                        Button(action: addPlayer) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
+                                    .foregroundColor(.green)
+                                    .border(Color.black, width: 3)
+                                    .offset(x: shakeAdd ? -10 : 0)
+                                    .animation(shakeAdd ? Animation.default.repeatCount(3).speed(3) : .default)
+                                
+                                Image(systemName: "plus")
+                                    .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title2).pointSize))
+                                    .foregroundColor(.black)
+                                    .offset(x: shakeAdd ? -10 : 0)
+                                    .animation(shakeAdd ? Animation.default.repeatCount(3).speed(3) : .default)
+                                
+                            }
+                        }
+                        Button(action: deletePlayer) {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
+                                    .foregroundColor(.lightRed)
+                                    .border(Color.black, width: 2)
+                                    .offset(x: shakeDel ? +10 : 0)
+                                    .animation(shakeDel ? Animation.default.repeatCount(3).speed(3) : .default)
+                                
+                                Image(systemName: "xmark")
+                                    .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title2).pointSize))
+                                    .foregroundColor(.black)
+                                    .offset(x: shakeDel ? +10 : 0)
+                                    .animation(shakeDel ? Animation.default.repeatCount(3).speed(3) : .default)
+                            }
+                        }
+                        .padding(.trailing)
+                    }
+                    LazyVStack(spacing: geo.size.height * 0.01) {
+                        ForEach(playerManager.players.indices, id: \.self) { index in
+                            PlayerCard(player: playerManager.players[index], index: index)
+                                .frame(height: geo.size.height * 0.08)
+                                .shadow(radius: 1)
+                                .padding()
+                        }
+                    }
+                    
                     Spacer()
-                    Button(action: addPlayer) {
-                        ZStack{
-                            Rectangle()
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
-                                .foregroundColor(.green)
-                                .border(Color.black, width: 3)
-                                .offset(x: shakeAdd ? -10 : 0)
-                                .animation(shakeAdd ? Animation.default.repeatCount(3).speed(3) : .default)
-                            
-                            Image(systemName: "plus")
-                                .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title2).pointSize))
-                                .foregroundColor(.black)
-                                .offset(x: shakeAdd ? -10 : 0)
-                                .animation(shakeAdd ? Animation.default.repeatCount(3).speed(3) : .default)
-                            
-                        }
+                    NavigationLink(destination: GenreView()) {
+                        Text("To Genre")
+                            .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize))
+                            .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.08)
+                            .background(playerManager.getPlayers().count >= 2 ? Color.lightRed : Color.newGray)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                    Button(action: deletePlayer) {
-                        ZStack {
-                            Rectangle()
-                                .frame(width: geo.size.width * 0.08, height: geo.size.height * 0.05)
-                                .foregroundColor(.lightRed)
-                                .border(Color.black, width: 2)
-                                .offset(x: shakeDel ? +10 : 0)
-                                .animation(shakeDel ? Animation.default.repeatCount(3).speed(3) : .default)
-                            
-                            Image(systemName: "xmark")
-                                .font(.custom("aptos-bold", size: UIFont.preferredFont(forTextStyle: .title2).pointSize))
-                                .foregroundColor(.black)
-                                .offset(x: shakeDel ? +10 : 0)
-                                .animation(shakeDel ? Animation.default.repeatCount(3).speed(3) : .default)
-                        }
-                    }
-                    .padding(.trailing)
+                    .disabled(playerManager.getPlayers().count < 2)
+                    .padding(.bottom, 20)
                 }
-                LazyVStack(spacing: geo.size.height * 0.01){
-                    ForEach(playerManager.players.indices, id: \.self) { index in
-                        PlayerCard(player: playerManager.players[index], index: index)
-                            .frame(height: geo.size.height * 0.08)
-                            .shadow(radius: 1)
-                            .padding()
-                    }
-                }
-                
-                
+                .navigationBarBackButtonHidden(true)
             }
         }
     }
@@ -102,7 +116,6 @@ struct Players: View {
             shakeDel = false
         }
     }
-    
 }
 
 #Preview {
