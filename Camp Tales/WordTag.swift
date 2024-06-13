@@ -16,25 +16,34 @@ struct Tag: Identifiable, Hashable {
 
 struct WordView: View {
     @Binding var words: [Tag]
-    var fontSize: CGFloat = 16
+    var fontSize: CGFloat = 18
     
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .leading, spacing: 15) {
-                ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 10) {
                         ForEach(getRows(for: geo.size.width), id: \.self) { row in
-                            WordRowView(row: row)
+                            HStack(spacing: 4) {
+                                ForEach(row) { tag in
+                                    Text(tag.name)
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 5)
+                                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1))
+                                        .fixedSize().onDrag {
+                                            return NSItemProvider(object: tag.name as NSString)
+                                        }
+                                }
+                            }
                         }
                     }
                     .padding(.vertical)
                 }
-                .onChange(of: words) {
+                .onChange(of: words) { _ in
                     updateWordSizes()
                 }
             }
         }
-    }
     
     func getRows(for width: CGFloat) -> [[Tag]] {
         var rows: [[Tag]] = []
@@ -42,14 +51,14 @@ struct WordView: View {
         var currentRowWidth: CGFloat = 0
         
         for word in words {
-            let wordWidth = word.size + 20 + 20
+            let wordWidth = word.size + 5 + 5// Padding + horizontal space
             if currentRowWidth + wordWidth > width {
                 rows.append(currentRow)
                 currentRow = [word]
                 currentRowWidth = wordWidth
             } else {
                 currentRow.append(word)
-                currentRowWidth += wordWidth + 5
+                currentRowWidth += wordWidth + 1 // Spacing
             }
         }
         
@@ -71,31 +80,6 @@ struct WordView: View {
     }
 }
 
-struct WordRowView: View {
-    var row: [Tag]
-    
-    var body: some View {
-        HStack(spacing: 5) {
-            ForEach(row) { tag in
-                WordTextView(tag: tag)
-            }
-        }
-    }
-}
-
-struct WordTextView: View {
-    var tag: Tag
-    
-    var body: some View {
-        Text(tag.name)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(RoundedRectangle(cornerRadius: 5).fill(Color.white))
-            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1))
-            .fixedSize()
-    }
-}
-
 #Preview {
-    WordView(words: .constant([Tag(name: "Sample", size: 100)]))
+    StoryView()
 }

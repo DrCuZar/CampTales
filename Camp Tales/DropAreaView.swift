@@ -12,38 +12,49 @@ struct DropAreaView: View {
     @Binding var wordBank: [Tag]
     
     var body: some View {
-        VStack {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.white)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1))
+            
             if storyIntroduction.isEmpty {
                 Text("Drag and Arrange")
                     .foregroundColor(.gray)
             } else {
-                ForEach(storyIntroduction) { tag in
-                    Text(tag.name)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black))
-                        .onDrag { NSItemProvider(object: tag.name as NSString) }
-                        .onDrop(of: [.text], isTargeted: nil) { providers in
-                            if let provider = providers.first {
-                                provider.loadObject(ofClass: String.self) { (string, error) in
-                                    if let name = string {
-                                        DispatchQueue.main.async {
-                                            self.storyIntroduction.removeAll { $0.name == name }
-                                            self.wordBank.append(Tag(name: name, size: 100))
-                                        }
-                                    }
-                                }
-                                return true
-                            }
-                            return false
-                        }
+                VStack {
+                    ForEach(storyIntroduction) { tag in
+                        Text(tag.name)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black))
+                            .fixedSize()
+                    }
                 }
             }
+        }
+        .onDrop(of: [.text], isTargeted: nil) { providers in
+            if let provider = providers.first {
+                provider.loadObject(ofClass: String.self) { (string, error) in
+                    if let name = string {
+                        DispatchQueue.main.async {
+                            // Remove the tag from wordBank
+                            if let index = self.wordBank.firstIndex(where: { $0.name == name }) {
+                                let tag = self.wordBank.remove(at: index)
+                                // Add the tag to storyIntroduction
+                                self.storyIntroduction.append(tag)
+                            }
+                        }
+                    }
+                }
+                return true
+            }
+            return false
         }
     }
 }
 
-//#Preview {
-//    DropAreaView(storyIntroduction: .constant([Tag(name: "Sample", size: 100)]), wordBank: .constant([]))
-//}
+#Preview {
+    DropAreaView(storyIntroduction: .constant([Tag(name: "Sample", size: 100)]), wordBank: .constant([]))
+}

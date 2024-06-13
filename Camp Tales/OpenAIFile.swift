@@ -32,7 +32,7 @@ class OpenAIService {
         urlRequest.addValue("Bearer \(API.key)", forHTTPHeaderField: "Authorization")
         //Body
         //system message being sent to chatgpt before
-        let systemMessage = GPTMessage(role: "system", content: "I want you to generate eight words that correspond with a genre.  I will give you the genre and you will give something cohesive to the introduction of the story.  You will not make a summary, but only the introduction.  Please try to incorporate at least 2 words that aren't commonly used that match the genre.  Don't reuse the same words when another request is made. Make it so the user wouldn't need to set up the story with all the words given. Keep in mind that we need words that can be arranged into an introduction for a made-up story.")
+        let systemMessage = GPTMessage(role: "system", content: "I want you to generate eight words that correspond with a genre.  I will give you the genre and you will give something cohesive to the introduction of the story.  You will not make a summary, but only the introduction.  Please try to incorporate 2 words that aren't commonly used that match the genre. Don't reuse the same words when another request is made. Make it so the user wouldn't need to set up the story with all the words given. Keep in mind that we need words that can be arranged into an introduction for a made-up story. I want you to include at least 2 forms of the verb be and one word of contention, like 'versus'.")
         let userMessage = GPTMessage(role: "user", content: message)
         
         let genre = GPTFunctionProperty(type: "string", description: "The selected genre is \(message). Give me the genre.")
