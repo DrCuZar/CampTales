@@ -21,6 +21,7 @@
 		CC62C9562BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9552BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift */; };
 		CC62C9632BF63F61009182DA /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62C9622BF63F61009182DA /* WelcomePage.swift */; };
 		CC787FCE2C116F20000ADB42 /* DropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC787FCD2C116F20000ADB42 /* DropAreaView.swift */; };
+		CC787FD02C1A7E64000ADB42 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC787FCF2C1A7E64000ADB42 /* TimerButton.swift */; };
 		CC883A982C00DA2800C3A233 /* Player_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC883A972C00DA2800C3A233 /* Player_List.swift */; };
 		CC883A9A2C08C1C800C3A233 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC883A992C08C1C800C3A233 /* SplashScreen.swift */; };
 		CC883AAB2C0A088000C3A233 /* aptos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC883AAA2C0A088000C3A233 /* aptos.ttf */; };
@@ -67,6 +68,7 @@
 		CC62C9552BF63A31009182DA /* Camp_TalesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camp_TalesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC62C9622BF63F61009182DA /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		CC787FCD2C116F20000ADB42 /* DropAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropAreaView.swift; sourceTree = "<group>"; };
+		CC787FCF2C1A7E64000ADB42 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
 		CC883A972C00DA2800C3A233 /* Player_List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_List.swift; sourceTree = "<group>"; };
 		CC883A992C08C1C800C3A233 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		CC883AA92C0A073500C3A233 /* Camp-Tales-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Camp-Tales-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -139,6 +141,7 @@
 				CC1168D52C113EDB00D9F529 /* WordTag.swift */,
 				CC787FCD2C116F20000ADB42 /* DropAreaView.swift */,
 				CC883A972C00DA2800C3A233 /* Player_List.swift */,
+				CC787FCF2C1A7E64000ADB42 /* TimerButton.swift */,
 				CC883AB52C0D6AA800C3A233 /* PlayerCard.swift */,
 				CC883AB32C0D641800C3A233 /* PlayerManager.swift */,
 				CC883AB12C0D5DD700C3A233 /* Players.swift */,
@@ -327,6 +330,7 @@
 				CC883A9A2C08C1C800C3A233 /* SplashScreen.swift in Sources */,
 				CC883AB62C0D6AA800C3A233 /* PlayerCard.swift in Sources */,
 				CC1168D62C113EDB00D9F529 /* WordTag.swift in Sources */,
+				CC787FD02C1A7E64000ADB42 /* TimerButton.swift in Sources */,
 				CC883A982C00DA2800C3A233 /* Player_List.swift in Sources */,
 				CC883AB42C0D641800C3A233 /* PlayerManager.swift in Sources */,
 				CC1168D82C1149CC00D9F529 /* StoryView.swift in Sources */,
@@ -500,6 +504,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Camp-Tales-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -530,6 +535,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Camp-Tales-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
